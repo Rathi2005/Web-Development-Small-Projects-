@@ -1,0 +1,278 @@
+*{
+    font-family: "Montserrat", serif;
+    margin: 0;
+    color: white;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+.main{
+    display: flex;
+    height: 100vh;  /* this will occupy the full parent height */
+}
+
+.sidebar{
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;  /* 16px */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    background-color: #121212;
+    flex: 1;   /* this represents that give me all the width other than occupied  */
+    border-radius: 1rem;  
+    overflow: auto;  /* this will add a scrol bar in the main content if needed */
+    margin: .5rem;
+}
+
+/* Sidebar nav*/
+
+.nav{
+    margin: .5rem;
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: .5rem .75rem;
+
+}
+
+.nav-option{
+    line-height: 2.5rem;
+    opacity: .5;
+    padding: .5rem .75rem;
+}
+
+.nav-option:hover{
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left:  1rem;
+}
+
+i{
+    font-size: 1.25rem;
+}
+
+/* sidebar library */
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    margin: .5rem;
+    flex-grow: 1;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .75rem;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons i{
+    margin: auto .75rem;
+    opacity: .7;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+
+/* Library Boxes */
+.boxes{
+    padding: .5rem .5rem;
+}
+
+.box{
+    background-color: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.box-p1{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.box-p2{
+    font-size: .8rem;
+    opacity: .75;
+    margin-bottom: 1.5rem;
+}
+.badge{
+    color: black;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-weight:700;
+
+}
+
+/* Main-content Sticky Nav */
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 1rem 2rem;
+    z-index: 10;
+}
+
+.sticky-nav-options{
+    /* margin-right: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-nav-options .badge{
+    margin-right: 1rem;
+}
+
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+
+/* media query to hide premium button and forward button */
+
+@media (max-width: 1000px){
+    .hide{
+        display: none;
+    }
+}
+
+/* cards section */
+
+.cards-container{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 150px;
+    display: inline-block;
+    background-color: #2c2c2c;
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card img{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.card-title{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: .5rem 0rem
+}
+.card-info{
+    width: 12rem;
+    font-size: small;
+    line-height: 1rem;
+    opacity: .5;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 90%;
+    height: 30%;
+}
+
+.music-player{
+    background-color: black;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%; 
+}
+
+.player-controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.player img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1.5rem;
+    opacity: .7;
+    align-items: center;
+}
+
+.player img:hover{
+    opacity:1;
+}
+
+.playback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 70%;
+    height: 3px;
+    margin: 0 1rem;
+    appearance: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: whitesmoke;
+    border-radius: 100px;
+    height: 5px;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: green;
+    border-radius: 50%;
+    margin-top: -6px;
+}
